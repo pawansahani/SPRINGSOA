@@ -1,0 +1,14 @@
+public class CalloutClass {
+    
+    
+    public static void  doCallout(){
+        String URL = 'https://postman-echo.com/get?foo1=bar1&foo2=bar2';
+        Http http = new Http();
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint(URL);
+        req.setMethod('GET');
+        HttpResponse res = http.send(req);
+        System.debug(res.getBody());
+	}
+
+}
