@@ -1,0 +1,8 @@
+public class ReturnAccountController {
+    
+    @AuraEnabled
+    public static List<Account> getAccounts(){
+        return [SELECT ID,Name FROM Account order by createdDate LIMIT 10];
+	}
+
+}
